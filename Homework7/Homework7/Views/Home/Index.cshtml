@@ -1,0 +1,47 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Animated Image Search</h2>
+<p>Powered by Giphy</p>
+<br/>
+<div class="row">
+    <div class="col-lg-3"><input type="text" id="searchBox" class="form-control" /></div>
+    <div class="col-lg-3"><input type="button" id="searchButton" class="btn btn-primary" value="Search" /></div>
+    <div class="col-lg-6"></div>
+</div>
+<div><br/></div>
+<div class="row">
+    <div class="col-lg-6">
+        <div class="row well">
+            <div class="col-lg-6">
+                <select id="rating" class="form-control">
+                    <option value="g">G</option>
+                    <option value="pg">PG</option>
+                    <option value="pg13">PG-13</option>
+                </select>
+
+            </div>
+            <div class="col-lg-6">
+                <select id="size" class="form-control">
+                    <option value="sm">Small</option>
+                    <option value="md">Medium</option>
+                    <option value="lg">Large</option>
+                </select>
+            </div>
+        </div>
+        </div>
+    </div>
+
+
+
+
+<div class="row">
+    <div id="displayArea" class="col-lg-12"></div>
+</div>
+
+@section scripts{
+    <script src="~/Scripts/homeIndex.js"></script>
+}
+

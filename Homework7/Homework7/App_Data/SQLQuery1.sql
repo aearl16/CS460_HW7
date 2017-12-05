@@ -1,0 +1,9 @@
+﻿CREATE TABLE datalog
+(
+	ID INT IDENTITY (1,1) NOT NULL,
+	SearchRequest VARCHAR(MAX) NOT NULL,
+	Agent VARCHAR(MAX) NOT NULL,
+	IPAddress VARCHAR(128),
+	SearchDate DateTime NOT NULL,
+	CONSTRAINT [PK_datalog] PRIMARY KEY (ID)
+);
