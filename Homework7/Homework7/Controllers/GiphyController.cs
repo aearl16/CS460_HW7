@@ -35,8 +35,9 @@ namespace Homework7.Controllers
         {
             List<GiphyResult> list = new List<GiphyResult>();
             //URI to be built base on input
+            string key = System.Web.Configuration.WebConfigurationManager.AppSettings["GiphyAPIKey"]; //get the key
             string httpQuery = "http://api.giphy.com/v1/gifs/search?api_key="
-                             + "DjAlDDSXi04C9p3UQRm557sfSwZQAuXK"
+                             + key
                              + "&q=" 
                              + Request.QueryString["find"]
                              + "&rating="
@@ -55,6 +56,7 @@ namespace Homework7.Controllers
             for (int i = 0; i < 25; i++)
             {
                 GiphyResult result = new GiphyResult();
+                //Default Image size will be medium
                 result.image = returnedData.data[i].images.downsized_medium.url;
                 list.Add(result);
             }
